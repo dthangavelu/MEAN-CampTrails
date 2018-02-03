@@ -1,0 +1,27 @@
+
+.thumbnail{
+    padding: 0;
+}
+
+.thumbnail img{
+    width: 100%;    
+}
+
+.delete-form{    
+    display: inline;    
+}
+
+.main-color {    
+    background: rgb(238, 253, 253);      
+    color: rgb(1, 27, 27);  
+}
+
+.comment{
+    margin-top: 2px;
+    margin-left: 15px;
+}
+
+#map {
+    height: 400px;
+    width: 100%;
+}

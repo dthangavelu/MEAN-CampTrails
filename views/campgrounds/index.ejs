@@ -1,0 +1,36 @@
+
+<% include ../partials/header %>
+
+<div class="container">
+    <header class="jumbotron main-color" >
+        <div class="container">
+        <h1><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlV6G4jyZ3wWezfPw6RXBt78Zhy0OgvybZ81DnFM8f6a52qLNv" width="57px" alt="Tent"> Welcome To CampTrails</h1>
+        <p>Your destination for ultimate campgrounds</p>        
+        <p><a href="/campgrounds/new" class="btn btn-primary btn-lg">Add New Campground</a></p>
+        </div>
+    </header>
+    
+    <div class="row text-center" style="display:flex; flex-wrap:wrap" >
+        <% campgrounds.forEach(function(campground){ %>
+            <div class="col-md-3 col-sm-6">    
+                <div class="thumbnail">
+                    <img src=<%= campground.image %> alt="">
+                    <div class="caption">
+                        <h4><%= campground.name %></h4>
+                    <!-- class caption div closing-->    
+                    </div>
+                    <p>
+                        <a href="/campgrounds/<%= campground._id %>" class="btn btn-primary">More Info</a>
+                    </p>
+                <!-- class thumbnail div closing-->    
+                </div>  
+            <!-- class col div closing-->    
+            </div>
+        <% }) %>
+    <!-- class row div closing-->    
+    </div>
+
+<!-- class container div closing-->    
+</div>
+
+<% include ../partials/footer %>
